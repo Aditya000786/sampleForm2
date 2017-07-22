@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+        <button ion-button icon-only (click)="newProject()"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>
+      Projects
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!-- <ion-card *ngIf="!isThereAnyProject"> -->
+        <ion-card>
+        <ion-card-header class="my-project-header">
+            No Ongoing Projects
+        </ion-card-header>
+        <ion-card-content>
+            <p>You are currently not doing any Project</p>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- <ng-container *ngIf="isThereAnyProject"> -->
+        <ion-card *ngFor="let project of projects; let i=index">
+            <ion-card-header class="my-project-header" (click)="goToProject(project,i)">{{project?.name}}</ion-card-header>
+            <ion-card-content>
+                <p (click)="goToProject(project,i)">{{project?.aboutProject}}</p>
+                <p (click)="goToProject(project,i)" class="client client-before">{{project?.clientName}}</p>
+                <button outline ion-button full (click)="detail(project)">Detail</button>
+                <button outline ion-button full (click)="edit(project,i)">Edit</button>
+            </ion-card-content>
+            <!-- <button ion-button block outline (click)="detail(project)">Detail</button> -->
+        </ion-card>
+        <button ion-button color='secondary' block (click)="logout()">LogOut</button>
+    <!-- </ng-container> -->
+</ion-content>

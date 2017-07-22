@@ -1,0 +1,29 @@
+<!--
+  Generated template for the WeekDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{week?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<p>
+  {{week?.startDate}}
+</p>
+
+<ion-item *ngFor="let day of week?.days">
+  <button class="my" ion-item no-lines (click)="toggleTimer(day)">
+    {{day?.name}}
+    <p>{{day?.totalSeconds | hoursminutesseconds}}</p>
+  </button>
+  <button ion-button (click)="detail(day)">Detail</button>
+</ion-item>
+
+</ion-content>

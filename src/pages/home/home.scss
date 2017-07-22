@@ -1,0 +1,16 @@
+page-home {
+    .my-project-header{
+    font-weight:bold;
+    font-size:large;
+    }
+    .client{
+        color: #ccc;
+        text-align: right;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0; 
+    }
+    .client:before{
+        content: '- To ';
+    }
+}

@@ -1,0 +1,154 @@
+<ion-header>
+  <ion-navbar color="primary" >
+    <ion-title>Finished</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+<p>Nice Work! You have Finished working on this project today for now.</p>
+<p>Below is the time that you have spent working on this session.Leave it as it is,you will be payed for this much.</p>
+<p>If you wanna give some discount,or spent a little too long on Youtube,please edit it.</p>
+<!-- <ion-list no-lines>
+ 
+        <ion-item>
+            <ion-label text-right>Total Time: </ion-label>
+            <ion-input [(ngModel)]="totalTime" type="tel"></ion-input>
+        </ion-item>
+ 
+        <ion-item>
+            <ion-label text-right>Charged Time: </ion-label>
+            <ion-input [(ngModel)]="chargedTime" type="tel"></ion-input>
+        </ion-item>
+ 
+        <ion-item>
+            <ion-label text-right>Uncharged Time: </ion-label>
+            <ion-input [(ngModel)]="unchargedTime" type="tel"></ion-input>
+        </ion-item>
+ 
+    </ion-list>    -->
+     <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-label text-left>Total Time: </ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                <ion-label>Hrs:</ion-label>
+                <ion-input [(ngModel)]="totalTimeHrs" (ngModelChange)="totalTimeHrs=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                <ion-label>Min:</ion-label>
+                <ion-input [(ngModel)]="totalTimeMin" (ngModelChange)="totalTimeMin=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                <ion-label>Sec:</ion-label>
+                <ion-input [(ngModel)]="totalTimeSec" (ngModelChange)="totalTimeSec=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                <ion-label text-left>Charged Time: </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                <ion-label>Hrs:</ion-label>
+                <ion-input [(ngModel)]="chargedTimeHrs" (ngModelChange)="chargedTimeHrs=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                <ion-label>Min:</ion-label>
+                <ion-input [(ngModel)]="chargedTimeMin" (ngModelChange)="chargedTimeMin=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                <ion-label>Sec:</ion-label>
+                <ion-input [(ngModel)]="chargedTimeSec" (ngModelChange)="chargedTimeSec=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                <ion-label text-left>Uncharged Time: </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                <ion-label>Hrs:</ion-label>
+                <ion-input [(ngModel)]="unChargedTimeHrs" (ngModelChange)="unChargedTimeHrs=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                <ion-label>Min:</ion-label>
+                <ion-input [(ngModel)]="unChargedTimeMin" (ngModelChange)="unChargedTimeMin=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                <ion-label>Sec:</ion-label>
+                <ion-input [(ngModel)]="unChargedTimeSec" (ngModelChange)="unChargedTimeSec=convertToNumber($event)" placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid> 
+        <!-- <ion-grid>
+        <ion-row>
+            <ion-col col-4>
+                <ion-label>Total Time: </ion-label>
+            </ion-col>
+            <ion-col col-4>
+                <ion-label>Charged Time: </ion-label>
+            </ion-col>
+            <ion-col col-4>
+                <ion-label>Uncharged Time: </ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                <ion-label col-3>Hrs:</ion-label>
+                <ion-input col-3 placehoder="2"></ion-input>
+                <ion-input col-3 placehoder="2"></ion-input>
+                <ion-input col-3 placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                <ion-label>Min:</ion-label>
+                <ion-input col-3 placehoder="2"></ion-input>
+                <ion-input col-3 placehoder="2"></ion-input>
+                <ion-input col-3 placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                <ion-label>Sec:</ion-label>
+                <ion-input col-3 placehoder="2"></ion-input>
+                <ion-input col-3 placehoder="2"></ion-input>
+                <ion-input col-3 placehoder="2"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid> -->
+     <button color='primary' outline ion-button (click)="submitTime()">Save Time</button> 
+</ion-content>
